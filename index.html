@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Coffee Party — Fusagasugá · 6 de diciembre</title>
+<meta name="description" content="14K: 4 corriendo + 10 bailando. Coffee Party en Capital Social Club, Fusagasugá. DJ en vivo, torneo de pádel, activaciones y una navidad para +1.500 niños. Entrada $60.000." />
+<meta name="theme-color" content="#000000" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Coffee Party · 14K Bailables — Fusagasugá 6 DIC" />
+<meta property="og:description" content="El pace es alto, el propósito también. 4K corriendo + 10K bailando y +3.000 sonrisas esta navidad." />
+<meta property="og:image" content="/og.jpg" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Ccircle cx='32' cy='32' r='18' fill='%2339FF14'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@1,600;1,700;1,900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --negro:#000;--verde:#39FF14;--rec:#FF3B30;--beat:.55s;
+  --fondo:#F1F4EA;--tinta:#0B0D09;--musgo:#E3E9D9;--linea:#C6D0BB;--gris:#5B675A;--acento:#0E7B00;
+  --display:'Anton',Impact,'Arial Narrow Bold',sans-serif;--texto:'Space Grotesk',system-ui,-apple-system,sans-serif;--serif:'Playfair Display',Georgia,serif;
+  --ease:cubic-bezier(.2,.8,.2,1);color-scheme:light dark;
+}
+[data-theme="dark"]{--fondo:#000;--tinta:#EDF3E8;--musgo:#0B1A0D;--linea:#1C2A1E;--gris:#8C9C88;--acento:var(--verde);color-scheme:dark}
+:root .sec--inv{--fondo:#000;--tinta:#EDF3E8;--musgo:#0B1A0D;--linea:#1C2A1E;--gris:#8C9C88;--acento:var(--verde);background:var(--fondo);color:var(--tinta)}
+[data-theme="dark"] .sec--inv{--fondo:#F1F4EA;--tinta:#0B0D09;--musgo:#E3E9D9;--linea:#C6D0BB;--gris:#5B675A;--acento:#0E7B00}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px;-webkit-text-size-adjust:100%}
+body{background:var(--fondo);color:var(--tinta);font-family:var(--texto);font-size:1.0625rem;line-height:1.5;overflow-x:hidden}
+a{color:inherit}button,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--acento);outline-offset:3px}
+::selection{background:var(--verde);color:var(--negro)}
+.grain{position:fixed;inset:0;z-index:40;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+[data-theme="dark"] .hero{background:radial-gradient(120% 80% at 72% 32%,rgba(130,86,44,.2),transparent 58%)}
+.cup{font-family:var(--serif);font-style:italic;font-weight:700;font-size:clamp(1.1rem,2.4vw,1.5rem);color:var(--tinta);display:inline-flex;align-items:center;gap:.6rem}
+.cup .sp{color:var(--verde);letter-spacing:.2em;font-family:var(--texto);font-style:normal}
+.lock{position:relative;line-height:.8;margin-top:.2rem}
+.lock .cp{font-family:var(--serif);font-style:italic;font-weight:900;color:var(--verde);font-size:clamp(3rem,10vw,9rem);display:block;text-shadow:0 0 22px rgba(57,255,20,.55),0 0 52px rgba(57,255,20,.3);opacity:0;animation:fade .9s .15s forwards}
+.lock .bk{font-family:var(--display);text-transform:uppercase;color:var(--verde);font-size:clamp(3.6rem,14.5vw,13rem);line-height:.8;display:block;margin-top:-.3em;letter-spacing:.005em;text-shadow:0 0 22px rgba(57,255,20,.5),0 0 54px rgba(57,255,20,.28);opacity:0;animation:fade .9s .32s forwards}
+.flyer{display:block}
+.oculto{display:none!important}img,video{max-width:100%;display:block}
+
+/* barra */
+.bar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 1.25rem;background:var(--fondo);border-bottom:2px solid var(--verde)}
+.bar__izq{display:flex;align-items:center;gap:.75rem;min-width:0}
+.bar__id{display:flex;align-items:center;gap:.6rem;font-family:var(--display);font-size:1.25rem;letter-spacing:.03em;text-decoration:none;text-transform:uppercase;white-space:nowrap}
+.rec{flex:0 0 auto;width:.7rem;height:.7rem;border-radius:50%;background:var(--rec);box-shadow:0 0 14px var(--rec);animation:blink var(--beat) steps(1) infinite}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:.15}}
+.bar__live{font-size:.72rem;font-weight:700;letter-spacing:.06em;color:var(--rec);text-decoration:none;border:2px solid var(--rec);padding:.15rem .5rem;white-space:nowrap}
+.bar__live:hover{background:var(--rec);color:#fff}
+.bar__nav{display:flex;gap:1.25rem;font-weight:500}
+.bar__nav a{text-decoration:none;padding:.25rem 0;border-bottom:2px solid transparent}
+.bar__nav a:hover{border-color:var(--verde)}
+.bar__der{display:flex;align-items:center;gap:.6rem;flex-shrink:0}
+.bar__tema{background:none;border:2px solid var(--linea);color:var(--tinta);width:2.4rem;height:2.4rem;font-size:1.05rem;line-height:1;cursor:pointer}
+.bar__tema:hover{border-color:var(--acento);color:var(--acento)}
+.bar__cta{text-decoration:none;border:2px solid var(--verde);background:var(--verde);color:var(--negro);padding:.5rem .9rem;font-weight:700;text-transform:uppercase;font-size:.85rem}
+.bar__cta:hover{background:var(--tinta);border-color:var(--tinta);color:var(--fondo)}
+.bar__menu{display:none;background:none;border:2px solid var(--verde);color:var(--acento);font-family:var(--display);letter-spacing:.06em;padding:.3rem .7rem;cursor:pointer;text-transform:uppercase}
+.menu{position:fixed;inset:0;z-index:80;background:var(--fondo);display:flex;flex-direction:column;justify-content:flex-end;padding:1.25rem;padding-bottom:calc(2rem + env(safe-area-inset-bottom,0px));gap:.1rem;transform:translateY(-102%);transition:transform .35s var(--ease),visibility 0s .35s;visibility:hidden}
+.menu.open{transform:none;visibility:visible;transition:transform .35s var(--ease),visibility 0s}
+.menu a{font-family:var(--display);font-size:clamp(3rem,15vw,5.5rem);line-height:.95;text-transform:uppercase;text-decoration:none;color:var(--tinta);padding:.05em 0;border-bottom:1px solid var(--linea)}
+.menu a:hover{color:var(--acento)}
+.menu__close{position:absolute;top:.7rem;right:1.25rem;background:none;border:2px solid var(--verde);color:var(--acento);width:2.6rem;height:2.6rem;font-size:1.4rem;line-height:1;cursor:pointer}
+body.menu-open{overflow:hidden}
+
+/* botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;text-decoration:none;border:2px solid var(--verde);background:none;padding:.85rem 1.3rem;font-weight:700;cursor:pointer;line-height:1.2;color:var(--tinta);text-transform:uppercase;letter-spacing:.02em;position:relative;overflow:hidden;isolation:isolate;transition:color .2s}
+.btn::before{content:"";position:absolute;inset:0;background:var(--verde);transform:translateX(-101%);transition:transform .3s var(--ease);z-index:-1}
+.btn:hover{color:var(--negro)}.btn:hover::before{transform:none}
+.btn--fill{background:var(--verde);color:var(--negro)}.btn--fill::before{background:var(--tinta)}.btn--fill:hover{color:var(--fondo);border-color:var(--tinta)}
+.btn--peq{padding:.45rem .8rem;font-size:.85rem}
+.btn--block{width:100%}.btn--xl{padding:1.1rem 1.8rem;font-size:1.1rem}
+.btn[disabled]{opacity:.4;cursor:not-allowed}.btn[disabled]::before{display:none}
+
+/* hero */
+.hero{position:relative;border-bottom:2px solid var(--verde);overflow:hidden;isolation:isolate}
+.hero__grid{position:absolute;inset:0;z-index:-2;opacity:.16;pointer-events:none;background-image:linear-gradient(var(--linea) 1px,transparent 1px),linear-gradient(90deg,var(--linea) 1px,transparent 1px);background-size:48px 48px}
+#scope{position:absolute;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none;opacity:.7}
+.hero__in{max-width:76rem;margin-inline:auto;padding:3rem 1.25rem 2.6rem;display:grid;grid-template-columns:1.35fr .65fr;gap:2.5rem;align-items:center;min-height:calc(100svh - 64px)}
+.hero__kick{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;color:var(--acento);margin-bottom:.8rem}
+.hero__kick::before{content:"";width:26px;height:2px;background:var(--verde)}
+.hero__meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.1rem}
+.chip{border:2px solid var(--linea);padding:.3rem .7rem;font-size:.8rem;font-weight:700;display:inline-flex;align-items:center;gap:.45rem;background:var(--fondo)}
+.chip--live{border-color:var(--rec);color:var(--rec)}.chip--live .rec{width:.55rem;height:.55rem}
+.hero__name{font-family:var(--display);font-size:clamp(4.4rem,17vw,17rem);line-height:.82;letter-spacing:-.01em;text-transform:uppercase}
+.hero__name .w{display:block;overflow:hidden}
+.hero__name .w span{display:inline-block;transform:translateY(110%);animation:up .9s var(--ease) forwards}
+.hero__name .w:nth-child(2) span{animation-delay:.12s;color:var(--acento);text-shadow:0 0 28px rgba(57,255,20,.35)}
+@keyframes up{to{transform:none}}
+.hero__tag{margin-top:1rem;font-size:clamp(1.05rem,2.1vw,1.45rem);max-width:32ch;font-weight:500;opacity:0;animation:fade .8s .5s forwards}
+.hero__tag b{color:var(--acento)}
+@keyframes fade{to{opacity:1}}
+.cuenta{display:flex;gap:1.1rem;margin:1.6rem 0 1.5rem;flex-wrap:wrap;opacity:0;animation:fade .8s .7s forwards}
+.cuenta .u{display:flex;flex-direction:column;border-left:2px solid var(--verde);padding-left:.8rem}
+.cuenta .n{font-family:var(--display);font-size:clamp(2.2rem,5.5vw,3.6rem);line-height:1;font-variant-numeric:tabular-nums}
+.cuenta .l{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gris);font-weight:700;margin-top:.2rem}
+.hero__acc{display:flex;gap:.7rem;flex-wrap:wrap;align-items:center;opacity:0;animation:fade .8s .9s forwards}
+.precio{display:flex;flex-direction:column;line-height:1.05;margin-left:.3rem}
+.precio small{font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gris);font-weight:700}
+.precio b{font-family:var(--display);font-size:1.8rem}
+.reel{position:relative;aspect-ratio:9/16;border:2px solid var(--verde);background:#000;overflow:hidden;max-height:76vh;justify-self:end;width:100%;max-width:21rem;box-shadow:0 0 0 6px var(--fondo),0 0 60px -10px rgba(57,255,20,.45);opacity:0;animation:fade 1s .4s forwards}
+.reel video{width:100%;height:100%;object-fit:cover}
+.reel__top{position:absolute;top:.7rem;left:.7rem;right:.7rem;display:flex;justify-content:space-between;align-items:center;z-index:2}
+.reel__lab{display:inline-flex;align-items:center;gap:.45rem;background:rgba(0,0,0,.65);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .55rem;border:1px solid rgba(255,255,255,.2)}
+.reel__mute{background:rgba(0,0,0,.65);border:2px solid var(--verde);color:var(--verde);font-family:var(--display);font-size:.8rem;letter-spacing:.06em;padding:.3rem .6rem;cursor:pointer;text-transform:uppercase}
+.reel__mute:hover{background:var(--verde);color:#000}
+.reel__bot{position:absolute;left:.7rem;right:.7rem;bottom:.7rem;z-index:2;font-family:var(--display);color:#fff;text-transform:uppercase;font-size:1.15rem;line-height:1;text-shadow:0 2px 12px rgba(0,0,0,.8)}
+.reel__bot small{display:block;font-family:var(--texto);font-size:.66rem;letter-spacing:.14em;color:var(--verde);margin-bottom:.25rem}
+
+/* 14K split interactivo */
+.split{background:var(--musgo);border-bottom:2px solid var(--verde);padding:2.2rem 1.25rem}
+.split__in{max-width:76rem;margin-inline:auto;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center}
+.split__k{font-family:var(--display);font-size:clamp(3.5rem,9vw,7rem);line-height:.85;text-transform:uppercase}
+.split__k small{display:block;font-family:var(--texto);font-size:.72rem;letter-spacing:.14em;color:var(--gris);font-weight:700}
+.split__bar{display:flex;height:4.5rem;border:2px solid var(--tinta);overflow:hidden}
+.split__seg{display:flex;flex-direction:column;justify-content:center;padding:0 1.2rem;color:var(--negro);font-family:var(--display);text-transform:uppercase;line-height:1;transition:flex-grow .8s var(--ease);min-width:0;white-space:nowrap}
+.split__seg small{font-family:var(--texto);font-size:.66rem;letter-spacing:.1em;font-weight:700;opacity:.75}
+.split__run{background:var(--verde);flex:0 0 0}
+.split__dance{background:var(--tinta);color:var(--fondo);flex:0 0 0}
+.split__seg b{font-size:1.5rem}
+@media(max-width:640px){.split__in{grid-template-columns:1fr;gap:1.2rem}}
+
+/* ticker */
+.ticker{background:var(--verde);color:var(--negro);overflow:hidden;white-space:nowrap;border-bottom:2px solid var(--verde)}
+.ticker__t{display:inline-flex;animation:marq 26s linear infinite;padding:.75rem 0}
+.ticker:hover .ticker__t{animation-play-state:paused}
+.ticker__i{font-family:var(--display);text-transform:uppercase;font-size:1.25rem;padding:0 1.4rem;display:inline-flex;align-items:center;gap:1.4rem}
+.ticker__i::after{content:"✦";font-size:.9rem}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* secciones */
+.sec{padding:3.6rem 1.25rem 4.4rem;border-bottom:2px solid var(--verde);position:relative;overflow:hidden}
+.wrap{max-width:72rem;margin-inline:auto;position:relative}
+.sec__head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1rem 2rem;margin-bottom:2rem}
+.h2{font-family:var(--display);font-size:clamp(3rem,9.5vw,7.5rem);line-height:.88;text-transform:uppercase}
+.h3{font-family:var(--display);font-size:clamp(1.5rem,4vw,2.4rem);line-height:.95;text-transform:uppercase}
+.sec__intro{max-width:38ch;color:var(--gris)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.2s}.rv-d3{transition-delay:.3s}
+.grid{display:grid;gap:1rem}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:860px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+.ley{background:var(--musgo)}
+.ley .q{font-family:var(--display);text-transform:uppercase;font-size:clamp(2rem,6.5vw,5.6rem);line-height:.92;max-width:18ch}
+.ley .q em{font-style:normal;color:var(--acento)}
+.ley .firma{margin-top:1.4rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;color:var(--gris)}
+.ley .firma b{color:var(--tinta)}
+
+/* razones */
+.razones{display:grid;grid-template-columns:repeat(4,1fr);border:2px solid var(--linea)}
+.razon{padding:2rem 1.5rem;border-right:2px solid var(--linea);transition:background .25s,color .25s}
+.razon:last-child{border-right:0}
+.razon:hover{background:var(--verde);color:var(--negro)}
+.razon .n{font-family:var(--display);font-size:clamp(3.2rem,7vw,5.5rem);line-height:.9}
+.razon .n small{font-size:.5em}
+.razon b{display:block;margin-top:.5rem;text-transform:uppercase;font-size:.95rem}
+.razon p{color:var(--gris);font-size:.9rem;margin-top:.3rem}.razon:hover p{color:rgba(0,0,0,.7)}
+@media(max-width:860px){.razones{grid-template-columns:1fr 1fr}.razon:nth-child(2){border-right:0}.razon:nth-child(-n+2){border-bottom:2px solid var(--linea)}}
+@media(max-width:480px){.razones{grid-template-columns:1fr}.razon{border-right:0;border-bottom:2px solid var(--linea)}.razon:last-child{border-bottom:0}}
+
+/* evento */
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:start}
+.lista{list-style:none;margin-top:1.3rem}
+.lista li{display:flex;gap:.9rem;padding:.9rem 0;border-top:1px solid var(--linea)}
+.lista li:last-child{border-bottom:1px solid var(--linea)}
+.lista .k{font-family:var(--display);color:var(--acento);font-size:1.3rem;line-height:1;flex:0 0 auto}
+.lista b{display:block}.lista span{color:var(--gris);font-size:.92rem}
+.ph{border:2px solid var(--linea);background:var(--musgo);display:grid;place-items:center;aspect-ratio:4/3;color:var(--gris);position:relative;transition:transform .3s var(--ease)}
+.ph:hover{transform:translateY(-4px)}
+.ph::after{content:"IMG";position:absolute;top:.5rem;right:.6rem;font-size:.6rem;letter-spacing:.2em;opacity:.5;font-weight:700}
+.ph span{font-family:var(--display);text-transform:uppercase;font-size:1.05rem;padding:.5rem;text-align:center}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+.ph.on span,.ph.on::after{display:none}
+.galeria{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:.8rem}
+.galeria .ph{aspect-ratio:4/5}
+.media3{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}.media3 .ph:first-child{grid-column:1/-1;aspect-ratio:16/9}
+.caja{border:2px solid var(--linea);padding:1.3rem;background:var(--musgo);transition:transform .25s var(--ease),border-color .25s}
+.caja:hover{transform:translateY(-4px);border-color:var(--verde)}
+.caja h3{font-family:var(--display);text-transform:uppercase;font-size:1.3rem;line-height:1;margin-bottom:.4rem}
+.caja p{color:var(--gris);font-size:.9rem}
+.caja .ic{font-family:var(--display);font-size:1.6rem;color:var(--acento);line-height:1;display:block;margin-bottom:.5rem}
+
+/* tabs (más que una carrera) */
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.4rem}
+.tab{border:2px solid var(--linea);background:none;color:var(--tinta);padding:.7rem 1.1rem;font-family:var(--display);text-transform:uppercase;font-size:1.05rem;letter-spacing:.02em;cursor:pointer;transition:.2s}
+.tab:hover{border-color:var(--verde)}
+.tab.on{background:var(--verde);border-color:var(--verde);color:var(--negro)}
+.tabp{display:none;border:2px solid var(--linea);padding:1.6rem;background:var(--musgo)}
+.tabp.on{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+.tabp h3{font-family:var(--display);text-transform:uppercase;font-size:clamp(1.6rem,4vw,2.6rem);margin-bottom:.6rem}
+.tabp p{color:var(--gris)}
+.tabp .ph{aspect-ratio:16/10}
+@media(max-width:700px){.tabp.on{grid-template-columns:1fr}}
+
+/* agenda */
+.agenda{display:grid;gap:.8rem;max-width:52rem}
+.fila{display:grid;grid-template-columns:7rem 1fr;gap:1.2rem;border:2px solid var(--linea);padding:1.1rem 1.3rem;align-items:baseline;transition:border-color .25s,transform .25s var(--ease)}
+.fila:hover{border-color:var(--verde);transform:translateX(6px)}
+.fila.prev{border-color:var(--rec)}
+.fila .t{font-family:var(--display);font-size:1.4rem;color:var(--acento);line-height:1}
+.fila.prev .t{color:var(--rec)}
+.fila .t small{display:block;font-family:var(--texto);font-size:.62rem;letter-spacing:.12em;color:var(--gris);font-weight:700}
+.fila h3{font-size:1.05rem;text-transform:uppercase;font-family:var(--display);margin-bottom:.2rem}
+.fila p{color:var(--gris);font-size:.92rem}
+@media(max-width:560px){.fila{grid-template-columns:1fr;gap:.4rem}}
+
+/* propósito */
+.meta-box{border:2px solid var(--verde);padding:1.6rem}
+.meta-box .big{font-family:var(--display);font-size:clamp(3rem,9vw,5.5rem);line-height:.9;color:var(--acento)}
+.meta-box .cap{color:var(--gris);margin:.3rem 0 1.2rem}
+.barra{height:14px;border:2px solid var(--linea);background:var(--musgo);overflow:hidden}
+.barra span{display:block;height:100%;width:0;background:var(--verde);transition:width 1.4s var(--ease)}
+.meta-row{display:flex;justify-content:space-between;margin-top:.5rem;font-size:.82rem;color:var(--gris);font-weight:700}
+.impacto{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:1.3rem}
+.impacto div{border:2px solid var(--linea);padding:.8rem;text-align:center}
+.impacto b{display:block;font-family:var(--display);font-size:1.3rem;color:var(--acento)}
+.impacto small{color:var(--gris);font-size:.72rem}
+
+/* entradas */
+.buy{display:grid;grid-template-columns:1.4fr 1fr;gap:1.4rem;align-items:start}
+@media(max-width:980px){.buy{grid-template-columns:1fr}.about{grid-template-columns:1fr}}
+.tk{border:2px solid var(--verde);padding:1.6rem;box-shadow:0 0 0 4px var(--fondo),0 0 0 6px var(--verde)}
+.tk__top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.tk h3{font-family:var(--display);text-transform:uppercase;font-size:1.9rem;line-height:1}
+.tk .tag{font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:2px solid var(--verde);background:var(--verde);color:var(--negro);padding:.2rem .5rem}
+.tk .precio2{font-family:var(--display);font-size:2.6rem;line-height:1;margin:.6rem 0}
+.tk .precio2 small{font-family:var(--texto);font-size:.75rem;color:var(--gris);font-weight:700}
+.tk ul{list-style:none;margin:.8rem 0 1.2rem;display:grid;gap:.5rem}
+.tk ul li{font-size:.92rem;padding-left:1.4rem;position:relative}
+.tk ul li::before{content:"✓";position:absolute;left:0;color:var(--acento);font-weight:700}
+.qtyrow{display:flex;justify-content:space-between;align-items:center;gap:1rem;border-top:1px solid var(--linea);padding-top:1.2rem}
+.qtyrow span{color:var(--gris);font-weight:700;text-transform:uppercase;font-size:.85rem}
+.step{display:inline-flex;border:2px solid var(--linea)}
+.step button{width:2.8rem;height:2.8rem;background:var(--musgo);border:none;cursor:pointer;font-family:var(--display);font-size:1.4rem;color:var(--tinta)}
+.step button:hover{background:var(--verde);color:var(--negro)}
+.step button:disabled{opacity:.35;cursor:not-allowed}
+.step .q{min-width:3rem;display:grid;place-items:center;font-family:var(--display);font-size:1.4rem}
+
+.resumen{border:2px solid var(--linea);padding:1.4rem;position:sticky;top:5rem;background:var(--fondo)}
+.resumen h3{font-family:var(--display);text-transform:uppercase;font-size:1.4rem;margin-bottom:.8rem}
+.lineas{list-style:none;margin-bottom:.8rem}
+.lineas li{display:flex;justify-content:space-between;gap:.8rem;padding:.5rem 0;border-bottom:1px solid var(--linea);font-size:.92rem}
+.lineas .v{font-weight:700;white-space:nowrap}
+.donacion{border:2px solid var(--rec);padding:.9rem;margin:.8rem 0}
+.donacion label{display:flex;gap:.5rem;align-items:center;font-size:.86rem;cursor:pointer;color:var(--rec);font-weight:700}
+.donacion .ops{display:flex;gap:.4rem;margin-top:.7rem}
+.donacion .ops button{flex:1;border:2px solid var(--linea);background:none;color:var(--tinta);padding:.5rem;cursor:pointer;font-weight:700;font-size:.82rem}
+.donacion .ops button.on{background:var(--rec);border-color:var(--rec);color:#fff}
+.donacion small{display:block;color:var(--gris);font-size:.72rem;margin-top:.5rem}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin:.3rem 0}
+.total .l{color:var(--gris);font-weight:700;text-transform:uppercase;font-size:.85rem}
+.total .t{font-family:var(--display);font-size:2.4rem;color:var(--acento);line-height:1}
+.campo{display:flex;flex-direction:column;gap:.3rem;margin-top:.8rem}
+.campo span{font-size:.78rem;color:var(--gris);font-weight:700}
+.campo input{width:100%;background:var(--musgo);border:2px solid var(--linea);color:var(--tinta);padding:.7rem .8rem;border-radius:0}
+.campo input:focus{outline:none;border-color:var(--verde)}
+.campo.row{flex-direction:row;gap:.6rem}.campo.row>div{flex:1;display:flex;flex-direction:column;gap:.3rem}
+
+/* pago nequi */
+.pago{border:2px solid var(--verde);padding:1.3rem;margin-top:1rem;background:var(--musgo)}
+.pago h4{font-family:var(--display);text-transform:uppercase;font-size:1.3rem;margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem}
+.pago__row{display:grid;grid-template-columns:auto 1fr;gap:1.1rem;align-items:center}
+.qr{width:8.5rem;height:8.5rem;border:2px solid var(--tinta);background:#fff;display:block;object-fit:contain;flex:0 0 auto}
+.qr-ph{width:8.5rem;height:8.5rem;border:2px dashed var(--linea);display:grid;place-items:center;text-align:center;color:var(--gris);font-size:.68rem;font-weight:700;padding:.5rem;line-height:1.3}
+.nequi-num{display:flex;align-items:center;gap:.5rem;border:2px solid var(--linea);padding:.5rem .7rem;margin:.5rem 0;background:var(--fondo)}
+.nequi-num b{font-family:var(--display);font-size:1.3rem;letter-spacing:.02em}
+.nequi-num button{margin-left:auto;border:2px solid var(--linea);background:none;color:var(--tinta);padding:.3rem .6rem;cursor:pointer;font-size:.74rem;font-weight:700;text-transform:uppercase}
+.nequi-num button:hover{border-color:var(--verde);color:var(--acento)}
+.pasos{list-style:none;counter-reset:p;margin-top:.6rem}
+.pasos li{counter-increment:p;position:relative;padding-left:2rem;margin-bottom:.5rem;font-size:.9rem;color:var(--gris)}
+.pasos li::before{content:counter(p);position:absolute;left:0;top:-.1rem;width:1.4rem;height:1.4rem;background:var(--verde);color:#000;font-family:var(--display);display:grid;place-items:center;font-size:.85rem}
+.acciones{display:grid;gap:.6rem;margin-top:1rem}
+.trust{display:grid;gap:.4rem;margin-top:.9rem;font-size:.78rem;color:var(--gris)}
+.trust span::before{content:"◉ ";color:var(--acento)}
+.aviso{padding:.75rem .9rem;border-left:3px solid var(--rec);background:var(--musgo);font-size:.86rem;margin-top:.6rem;color:var(--rec)}
+.share{margin-top:2.2rem;border:2px solid var(--linea);padding:1.3rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.share b{font-family:var(--display);text-transform:uppercase;font-size:1.4rem;display:block}
+.share p{color:var(--gris);font-size:.9rem}
+
+.marq{overflow:hidden;border-bottom:2px solid var(--verde);background:var(--musgo)}
+.marq__t{display:inline-flex;white-space:nowrap;animation:marq 42s linear infinite;padding:.9rem 0}
+.marq:hover .marq__t{animation-play-state:paused}
+.marq__i{font-family:var(--display);text-transform:uppercase;font-size:1.3rem;padding:0 1.5rem;border-right:1px solid var(--linea)}
+
+.faq-item{border:2px solid var(--linea);margin-bottom:.7rem}
+.faq-q{width:100%;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;gap:1rem;padding:1.1rem 1.2rem;text-align:left;font-weight:700}
+.faq-q .s{font-family:var(--display);color:var(--acento);font-size:1.5rem;line-height:1;transition:transform .3s}
+.faq-item.open .faq-q .s{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
+.faq-a p{padding:0 1.2rem 1.2rem;color:var(--gris);font-size:.92rem;max-width:60ch}
+
+.foot{padding:3rem 1.25rem 2rem}
+.foot__cta{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;padding-bottom:2.5rem;margin-bottom:2.5rem;border-bottom:2px solid var(--verde)}
+.foot__cta h2{font-family:var(--display);text-transform:uppercase;font-size:clamp(2.2rem,7vw,5rem);line-height:.9}
+.foot__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2rem}
+@media(max-width:700px){.foot__grid{grid-template-columns:1fr}}
+.foot h4{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);margin-bottom:.8rem}
+.foot a{display:block;padding:.25rem 0;color:var(--gris);text-decoration:none}.foot a:hover{color:var(--acento)}
+.foot__brand{font-family:var(--display);text-transform:uppercase;font-size:1.5rem;margin-bottom:.6rem}
+.foot__bottom{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:2.5rem;color:var(--gris);font-size:.8rem}
+
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:.8rem;align-items:center;justify-content:space-between;padding:.7rem 1.25rem;padding-bottom:calc(.7rem + env(safe-area-inset-bottom,0px));background:var(--fondo);border-top:2px solid var(--verde);transform:translateY(110%);transition:transform .35s var(--ease)}
+.buybar.show{transform:none}
+.buybar .p{display:flex;flex-direction:column;line-height:1}
+.buybar .p small{font-size:.62rem;color:var(--gris);text-transform:uppercase;font-weight:700;letter-spacing:.08em}
+.buybar .p b{font-family:var(--display);font-size:1.3rem}
+.buybar .cd{display:none;font-size:.78rem;color:var(--gris);font-weight:700}.buybar .cd b{color:var(--rec)}
+@media(min-width:700px){.buybar .cd{display:block}}
+
+@media(max-width:980px){.hero__in{grid-template-columns:1fr;min-height:0;gap:2rem}.reel{justify-self:start;max-width:18rem;max-height:none}}
+@media(max-width:860px){.bar__nav{display:none}.bar__menu{display:block}.bar__cta{display:none}}
+@media(max-width:560px){body{padding-bottom:4.6rem}.reel{max-width:100%;width:min(100%,16rem);margin-inline:auto}.pago__row{grid-template-columns:1fr;justify-items:center;text-align:center}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}.hero__name .w span{transform:none}.lock .cp,.lock .bk,.hero__tag,.cuenta,.hero__acc,.reel{opacity:1}}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="bar">
+  <div class="bar__izq">
+    <a class="bar__id" href="#inicio"><span class="rec" aria-hidden="true"></span> COFFEE PARTY</a>
+    <a class="bar__live" href="#entradas">CUPOS LIMITADOS</a>
+  </div>
+  <nav class="bar__nav" aria-label="Secciones">
+    <a href="#evento">Evento</a><a href="#mas">Más que una carrera</a><a href="#agenda">Agenda</a><a href="#proposito">Propósito</a><a href="#entradas">Entradas</a><a href="#faq">FAQ</a>
+  </nav>
+  <div class="bar__der">
+    <button class="bar__tema" data-tema-btn type="button" aria-label="Cambiar tema"></button>
+    <a class="bar__cta" href="#entradas">Comprar</a>
+    <button class="bar__menu" id="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
+  </div>
+</header>
+<nav class="menu" id="menu" aria-label="Menú">
+  <button class="menu__close" id="menu-close" aria-label="Cerrar">×</button>
+  <a href="#evento">Evento</a><a href="#mas">Más que una carrera</a><a href="#agenda">Agenda</a><a href="#proposito">Propósito</a><a href="#entradas">Entradas</a><a href="#faq">FAQ</a>
+</nav>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero__grid"></div>
+  <canvas id="scope" aria-hidden="true"></canvas>
+  <div class="hero__in">
+    <div>
+      <span class="cup"><span class="sp">✦✦✦</span> Con un Propósito <span class="sp">✦✦✦</span></span>
+      <div class="hero__meta" style="margin-top:1rem">
+        <span class="chip chip--live"><span class="rec" aria-hidden="true"></span> Cupos limitados</span>
+        <span class="chip">Dom 6 DIC · 06:00 AM</span>
+        <span class="chip">Capital Social Club · Fusa</span>
+        <span class="chip">+15 años</span>
+      </div>
+      <h1 class="hero__name lock"><span class="cp">Coffee Party</span><span class="bk">14K Bailables</span></h1>
+      <p class="hero__tag"><b>El pace es alto, el propósito también.</b> 4K corriendo + 10K bailando, DJ en vivo y +3.000 sonrisas esta navidad.</p>
+      <div class="cuenta" aria-label="Cuenta regresiva">
+        <div class="u"><span class="n" data-cd="d">--</span><span class="l">Días</span></div>
+        <div class="u"><span class="n" data-cd="h">--</span><span class="l">Horas</span></div>
+        <div class="u"><span class="n" data-cd="m">--</span><span class="l">Min</span></div>
+        <div class="u"><span class="n" data-cd="s">--</span><span class="l">Seg</span></div>
+      </div>
+      <div class="hero__acc">
+        <a href="#entradas" class="btn btn--fill btn--xl">Comprar mi entrada</a>
+        <a href="#mas" class="btn">Ver el plan</a>
+        <span class="precio"><small>Entrada única</small><b>$60.000</b></span>
+      </div>
+    </div>
+    <div class="reel" id="reel">
+      <video id="reelV" src="promo.mp4" poster="poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+      <div class="reel__top"><span class="reel__lab"><span class="rec" style="width:.5rem;height:.5rem" aria-hidden="true"></span> Reel oficial</span><button class="reel__mute" id="reelMute" type="button">Sonido</button></div>
+      <div class="reel__bot"><small>Lo que dice el DJ es ley</small>Morning Party</div>
+    </div>
+  </div>
+</section>
+
+<!-- 14K split -->
+<section class="split" aria-label="14K: 4 corriendo + 10 bailando">
+  <div class="split__in">
+    <div class="split__k">14K<small>Bailables</small></div>
+    <div>
+      <div class="split__bar" id="splitBar">
+        <div class="split__seg split__run"><b>4K</b><small>Corriendo</small></div>
+        <div class="split__seg split__dance"><b>10K</b><small>Bailando</small></div>
+      </div>
+      <p style="color:var(--gris);margin-top:.7rem;font-size:.92rem">Corres poquito, bailas un montón. Apto para todos — lo importante es llegar y gozártelo.</p>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker__t" id="ticker"></div></div>
+
+<section class="sec ley" id="ley">
+  <div class="wrap">
+    <p class="q rv">“Lo que dice el DJ es <em>ley</em>. Nos vemos para disfrutar, hacer deporte, pasarla rico y, sobre todo, <em>regalar navidad</em>.”</p>
+    <div class="firma rv rv-d1"><b>Con un Propósito</b><span>·</span><span>Morning Party · Capital Social Club, Fusagasugá</span><a href="#entradas" class="btn btn--peq">¿Te lo vas a perder?</a></div>
+  </div>
+</section>
+
+<section class="sec" id="razones">
+  <div class="wrap">
+    <div class="sec__head"><h2 class="h2 rv">Por qué ir</h2><p class="sec__intro rv rv-d1">Cuatro razones. Cualquiera sobra.</p></div>
+    <div class="razones rv">
+      <div class="razon"><div class="n">14<small>K</small></div><b>4 corres, 10 bailas</b><p>El reto más gozón de Fusa.</p></div>
+      <div class="razon"><div class="n">1</div><b>DJ en vivo</b><p>La Morning Party no para.</p></div>
+      <div class="razon"><div class="n">+1.5K</div><b>Regalos de navidad</b><p>Tu entrada se vuelve regalos.</p></div>
+      <div class="razon"><div class="n">∞</div><b>Pádel, marcas y más</b><p>Activaciones, influencers y negocios locales.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="evento">
+  <div class="wrap">
+    <div class="sec__head"><h2 class="h2 rv">El evento</h2><p class="sec__intro rv rv-d1">Un 14K para todos, música sin parar y una causa que nos une: regalar navidad.</p></div>
+    <div class="about">
+      <div class="rv">
+        <p style="font-size:1.12rem">Coffee Party · 14K Bailables es el evento de Con un Propósito en Capital Social Club, Fusagasugá. Corres 4K, bailas 10K y la pasas increíble. Seas corredor de siempre o vayas por primera vez, aquí todos caben.</p>
+        <ul class="lista">
+          <li><span class="k">01</span><div><b>14K a tu ritmo</b><span>4 km corriendo + 10 km bailando.</span></div></li>
+          <li><span class="k">02</span><div><b>DJ y Morning Party</b><span>Música en vivo todo el día.</span></div></li>
+          <li><span class="k">03</span><div><b>Pádel, marcas e influencers</b><span>Torneo relámpago, activaciones y creadores invitados.</span></div></li>
+          <li><span class="k">04</span><div><b>Navidad con propósito</b><span>Tu entrada ayuda a recoger +1.500 regalos.</span></div></li>
+        </ul>
+        <div style="margin-top:1.5rem"><a href="#entradas" class="btn btn--fill">Quiero mi entrada</a></div>
+      </div>
+      <!-- 🔁 REEMPLAZAR por fotos/videos reales del evento -->
+      <div class="rv rv-d1">
+        <img class="flyer" src="/flyer.jpg" alt="Flyer oficial Coffee Party 14K Bailables" style="width:100%;border:2px solid var(--verde);box-shadow:0 0 50px -12px rgba(57,255,20,.4)">
+        <div class="grid g2" style="margin-top:.8rem"><div class="ph"><img src="/img/corriendo.jpg" alt="Corriendo" onload="this.parentNode.classList.add('on')" onerror="this.remove()"><span>Corriendo</span></div><div class="ph"><img src="/img/bailando.jpg" alt="Bailando" onload="this.parentNode.classList.add('on')" onerror="this.remove()"><span>Bailando</span></div></div>
+      </div>
+    </div>
+    <h3 class="h3 rv" style="margin:2.8rem 0 1.3rem">Tu entrada incluye</h3>
+    <div class="grid g4">
+      <div class="caja rv"><span class="ic">◆</span><h3>Medalla</h3><p>Para todos los que llegan.</p></div>
+      <div class="caja rv rv-d1"><span class="ic">▲</span><h3>Camiseta</h3><p>Diseño oficial del evento.</p></div>
+      <div class="caja rv rv-d2"><span class="ic">♪</span><h3>Morning Party</h3><p>DJ en vivo.</p></div>
+      <div class="caja rv rv-d3"><span class="ic">◎</span><h3>Hidratación</h3><p>Puntos en ruta.</p></div>
+      <div class="caja rv"><span class="ic">☕</span><h3>Café</h3><p>De nuestros aliados.</p></div>
+      <div class="caja rv rv-d1"><span class="ic">✦</span><h3>Sorpresas</h3><p>Rifas y regalos.</p></div>
+      <div class="caja rv rv-d2"><span class="ic">▣</span><h3>Activaciones</h3><p>Marcas y experiencias.</p></div>
+      <div class="caja rv rv-d3"><span class="ic">♥</span><h3>Causa</h3><p>Aportas a la navidad.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MÁS QUE UNA CARRERA (tabs interactivos) -->
+<section class="sec sec--inv" id="mas">
+  <div class="wrap">
+    <div class="sec__head"><h2 class="h2 rv">Más que una carrera</h2><p class="sec__intro rv rv-d1">Toca cada una para ver qué te espera.</p></div>
+    <div class="tabs rv" id="tabs">
+      <button class="tab on" data-t="0">Torneo de Pádel</button>
+      <button class="tab" data-t="1">Activaciones</button>
+      <button class="tab" data-t="2">Influencers</button>
+      <button class="tab" data-t="3">Negocios locales</button>
+    </div>
+    <div class="tabp on" data-p="0"><div><h3>Torneo de Pádel Relámpago</h3><p>Un torneo exprés durante el evento para los que quieran sumar adrenalina. Arma tu dupla y compite por sorpresas. <!-- 🔁 CONFIRMAR formato/cupos --></p></div><div class="ph"><img src="/img/padel.jpg" alt="Pádel" onload="this.parentNode.classList.add('on')" onerror="this.remove()"><span>Pádel</span></div></div>
+    <div class="tabp" data-p="1"><div><h3>Activaciones de marca</h3><p>Stands y experiencias de las marcas aliadas: pruebas de producto, retos, premios y mucho contenido para llevarte.</p></div><div class="ph"><img src="/img/activaciones.jpg" alt="Activaciones" onload="this.parentNode.classList.add('on')" onerror="this.remove()"><span>Activaciones</span></div></div>
+    <div class="tabp" data-p="2"><div><h3>Influencers invitados</h3><p>Creadores de Fusa y la región viviendo el evento en vivo. Ven, salúdalos y sal en el contenido del día.</p></div><div class="ph"><img src="/img/influencers.jpg" alt="Influencers" onload="this.parentNode.classList.add('on')" onerror="this.remove()"><span>Influencers</span></div></div>
+    <div class="tabp" data-p="3"><div><h3>Negocios locales</h3><p>Emprendimientos de Fusagasugá con sus mejores productos: café, comida, moda y más. Apoyar lo local también es el plan.</p></div><div class="ph"><img src="/img/negocios.jpg" alt="Negocios locales" onload="this.parentNode.classList.add('on')" onerror="this.remove()"><span>Negocios locales</span></div></div>
+  </div>
+</section>
+
+<section class="sec" id="galeriaSec" style="display:none">
+  <div class="wrap">
+    <div class="sec__head"><h2 class="h2 rv">Galería</h2><p class="sec__intro rv rv-d1">Así se vive el Coffee Party.</p></div>
+    <div class="galeria" id="galeria"></div>
+  </div>
+</section>
+
+<section class="sec" id="agenda">
+  <div class="wrap">
+    <div class="sec__head"><h2 class="h2 rv">Agenda</h2><p class="sec__intro rv rv-d1">Horarios aproximados — se confirman en el grupo oficial. <!-- 🔁 CONFIRMAR --></p></div>
+    <div class="agenda">
+      <div class="fila prev rv"><div class="t">5 DIC<small>Sábado</small></div><div><h3>Entrega de kits</h3><p>El día anterior recoges tu número, camiseta y medalla en Capital Social Club.</p></div></div>
+      <div class="fila rv"><div class="t">6:00<small>6 DIC · AM</small></div><div><h3>Encuentro y calentamiento</h3><p>Activación grupal para arrancar con toda.</p></div></div>
+      <div class="fila rv"><div class="t">6:30<small>AM</small></div><div><h3>Salida 4K</h3><p>Recorrido recreativo a tu ritmo.</p></div></div>
+      <div class="fila rv"><div class="t">7:30<small>AM</small></div><div><h3>10K bailables · Morning Party</h3><p>DJ en vivo, café y mucho baile.</p></div></div>
+      <div class="fila rv"><div class="t">10:00<small>AM</small></div><div><h3>Pádel, activaciones e influencers</h3><p>Torneo relámpago, marcas y negocios locales.</p></div></div>
+      <div class="fila rv"><div class="t">12:00<small>PM</small></div><div><h3>Sorpresas y cierre</h3><p>Rifas, reconocimientos y la causa navideña.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--inv" id="proposito">
+  <div class="wrap">
+    <div class="sec__head"><h2 class="h2 rv">El propósito</h2><p class="sec__intro rv rv-d1">Que ningún niño de Fusa se quede sin regalo esta navidad.</p></div>
+    <div class="about">
+      <div class="rv">
+        <p style="font-size:1.12rem">Cada entrada y cada aporte se convierten en regalos para los niños de Fusagasugá. Súmate como <b style="color:var(--acento)">Padrino Navideño</b> y multiplica el impacto.</p>
+        <div class="impacto"><div><b>$5.000</b><small>medio regalo</small></div><div><b>$10.000</b><small>1 regalo</small></div><div><b>$20.000</b><small>2 niños felices</small></div></div>
+        <div style="margin-top:1.5rem"><a href="#entradas" class="btn btn--fill">Ser Padrino Navideño</a></div>
+      </div>
+      <div class="meta-box rv rv-d1">
+        <div class="big" data-count="1500" data-suffix="+">0</div>
+        <div class="cap">regalos — nuestra meta esta navidad</div>
+        <div class="barra"><span id="goalBar"></span></div>
+        <!-- 🔁 ACTUALIZAR recogidos reales -->
+        <div class="meta-row"><span>Recogidos: 820</span><span>55%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="entradas">
+  <div class="wrap">
+    <div class="sec__head"><h2 class="h2 rv">Entradas</h2><p class="sec__intro rv rv-d1">Elige cuántas, paga por Nequi y envíanos el comprobante. Te confirmamos tu cupo al toque.</p></div>
+    <div class="buy">
+      <div class="tk rv">
+        <div class="tk__top"><h3>Entrada general</h3><span class="tag">14K + Party</span></div>
+        <div class="precio2">$60.000 <small>/ persona</small></div>
+        <ul>
+          <li>14K: 4 km corriendo + 10 km bailando</li>
+          <li>Medalla y camiseta oficial</li>
+          <li>Morning Party con DJ en vivo</li>
+          <li>Café, hidratación y sorpresas</li>
+          <li>Pádel, activaciones y negocios locales</li>
+          <li>Aporte a la causa navideña</li>
+        </ul>
+        <div class="qtyrow"><span>¿Cuántas entradas?</span><div class="step"><button data-a="dec" aria-label="Quitar">–</button><span class="q" id="qty">1</span><button data-a="inc" aria-label="Agregar">+</button></div></div>
+      </div>
+
+      <aside class="resumen">
+        <h3>Tu pedido</h3>
+        <ul class="lineas" id="lineas"></ul>
+        <div class="donacion">
+          <label><input type="checkbox" id="donChk"> + Sumar un regalo navideño 🎄</label>
+          <div class="ops" id="donOps" style="display:none"><button data-don="5000">$5.000</button><button data-don="10000">$10.000</button><button data-don="20000">$20.000</button></div>
+          <small>$10.000 = un regalo completo para un niño de Fusa.</small>
+        </div>
+        <div class="total"><span class="l">Total</span><span class="t" id="total">$60.000</span></div>
+        <div class="campo"><span>Nombre completo *</span><input id="fName" type="text" placeholder="Nombre y apellido" autocomplete="name"></div>
+        <div class="campo row"><div><span>WhatsApp *</span><input id="fPhone" type="tel" placeholder="300 000 0000" autocomplete="tel"></div><div><span>Correo (opcional)</span><input id="fMail" type="email" placeholder="correo@ejemplo.com" autocomplete="email"></div></div>
+
+        <div class="pago">
+          <h4>Paga por Nequi</h4>
+          <div class="pago__row">
+            <!-- 🔁 REEMPLAZAR: exporta tu QR de Nequi y guárdalo como nequi-qr.png en la carpeta -->
+            <img class="qr" id="qrImg" src="/nequi-qr.png" alt="QR Nequi" onerror="this.style.display='none';document.getElementById('qrPh').style.display='grid'">
+            <div class="qr-ph" id="qrPh" style="display:none">Pega aquí tu QR de Nequi<br>(archivo nequi-qr.png)</div>
+            <div>
+              <div class="nequi-num"><b id="nequiN">310 247 6912</b><button id="copyN" type="button">Copiar</button></div>
+              <ol class="pasos">
+                <li>Escanea el QR o envía a este número por Nequi.</li>
+                <li>Paga el total exacto: <b id="pagoTotal">$60.000</b>.</li>
+                <li>Envíanos el comprobante por WhatsApp y te confirmamos.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="acciones">
+          <button class="btn btn--fill btn--block btn--xl" id="btnWa">Ya pagué — enviar comprobante</button>
+          <a class="btn btn--block" id="btnAsk" href="#" target="_blank" rel="noopener">Preguntar por WhatsApp</a>
+        </div>
+        <div class="trust"><span>Pago directo por Nequi, sin intermediarios</span><span>Confirmación por WhatsApp</span><span>Tu aporte va a la navidad de los niños</span></div>
+        <div id="buyMsg"></div>
+      </aside>
+    </div>
+
+    <div class="share rv"><div><b>Invita a tu parche</b><p>Correr solo está bien. Correr con tu gente, mejor.</p></div><a class="btn" id="btnShare" href="#" target="_blank" rel="noopener">Compartir por WhatsApp</a></div>
+  </div>
+</section>
+
+<section class="sec" id="aliados" style="padding-bottom:0;border-bottom:0">
+  <div class="wrap"><div class="sec__head"><h2 class="h2 rv">Aliados</h2><p class="sec__intro rv rv-d1">Marcas y negocios que hacen posible esta navidad.</p></div></div>
+</section>
+<!-- 🔁 REEMPLAZAR por logos reales -->
+<div class="marq"><div class="marq__t" id="marq"></div></div>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec__head"><h2 class="h2 rv">FAQ</h2><p class="sec__intro rv rv-d1">¿Dudas? Escríbenos por WhatsApp o Instagram.</p></div>
+    <div style="max-width:52rem">
+      <div class="faq-item"><button class="faq-q">¿Necesito experiencia o entrenar? <span class="s">+</span></button><div class="faq-a"><p>Para nada. Son 4 km corriendo a tu ritmo (caminando, trotando o corriendo) y 10 km bailando. Es para disfrutar, no para competir.</p></div></div>
+      <div class="faq-item"><button class="faq-q">¿Qué incluye la entrada? <span class="s">+</span></button><div class="faq-a"><p>Medalla, camiseta oficial, Morning Party con DJ, café, hidratación, sorpresas, acceso a las activaciones y negocios locales, y tu aporte a la causa navideña.</p></div></div>
+      <div class="faq-item"><button class="faq-q">¿Cómo pago y cómo me confirman? <span class="s">+</span></button><div class="faq-a"><p>Pagas por Nequi (escaneando el QR o al número que aparece en Entradas), nos envías el comprobante por WhatsApp y te confirmamos el cupo al toque.</p></div></div>
+      <div class="faq-item"><button class="faq-q">¿Cuándo y dónde recojo el kit? <span class="s">+</span></button><div class="faq-a"><p>La entrega de kits es el día anterior, sábado 5 de diciembre, en Capital Social Club, Fusagasugá.</p></div></div>
+      <div class="faq-item"><button class="faq-q">¿Dónde es el evento? <span class="s">+</span></button><div class="faq-a"><p>En Capital Social Club, Fusagasugá (Cundinamarca). El punto de encuentro exacto y el mapa se comparten en el grupo oficial. <!-- 🔁 CONFIRMAR dirección --></p></div></div>
+      <div class="faq-item"><button class="faq-q">¿A dónde van los regalos? <span class="s">+</span></button><div class="faq-a"><p>Todo lo recogido se destina a regalos de navidad para niños de Fusagasugá. La meta es superar los 1.500 regalos.</p></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__cta"><h2 class="rv">¿Te lo vas<br>a perder?</h2><a href="#entradas" class="btn btn--fill btn--xl">Comprar mi entrada — $60.000</a></div>
+    <div class="foot__grid">
+      <div>
+        <div class="foot__brand">COFFEE PARTY</div>
+        <p style="color:var(--gris);max-width:32ch;font-size:.92rem">Domingo 6 de diciembre · Capital Social Club, Fusagasugá · Cundinamarca. Un evento de Con un Propósito. Corre, baila y regala navidad.</p>
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem"><a class="btn btn--peq" href="https://instagram.com/conu.nproposito" target="_blank" rel="noopener">@conu.nproposito</a><a class="btn btn--peq" id="footWa" href="#" target="_blank" rel="noopener">WhatsApp</a></div>
+      </div>
+      <div><h4>El evento</h4><a href="#evento">De qué se trata</a><a href="#mas">Más que una carrera</a><a href="#agenda">Agenda</a><a href="#proposito">El propósito</a></div>
+      <div><h4>Participa</h4><a href="#entradas">Comprar entrada</a><a href="#proposito">Ser Padrino</a><a href="#faq">Preguntas frecuentes</a></div>
+    </div>
+    <div class="foot__bottom"><span>© 2026 Coffee Party · Con un Propósito</span><span>Hecho con propósito en Fusagasugá 🎄</span></div>
+  </div>
+</footer>
+
+<div class="buybar" id="buybar">
+  <div class="p"><small>Entrada general</small><b>$60.000</b></div>
+  <div class="cd">Faltan <b id="buybarDias">--</b> días</div>
+  <a href="#entradas" class="btn btn--fill">Comprar</a>
+</div>
+
+<script>
+/* ============================================================
+   🔁 CONFIG
+   ============================================================ */
+const WHATSAPP='573102476912';          /* WhatsApp del organizador */
+const NEQUI='310 247 6912';             /* 🔁 número Nequi (confirmar si es otro) */
+const PRECIO=60000;                     /* entrada única */
+const META_REGALOS=1500;                /* meta de la barra */
+const META_PCT=55;                      /* 🔁 % recogido real */
+let EVENT_DATE=new Date('2026-12-06T07:00:00-05:00');
+if(EVENT_DATE<new Date())EVENT_DATE=new Date((new Date().getFullYear()+1)+'-12-06T07:00:00-05:00');
+/* ============================================================ */
+
+const fmt=n=>'$'+n.toLocaleString('es-CO');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* tema */
+(()=>{const g=()=>{try{return localStorage.getItem('tema')}catch{return null}};const sis=()=>matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';const act=()=>g()||sis();
+ const ap=()=>{const t=act();document.documentElement.dataset.theme=t;document.querySelectorAll('[data-tema-btn]').forEach(b=>b.textContent=t==='dark'?'☼':'☾');const m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='dark'?'#000000':'#F1F4EA';};
+ window.Tema={cambiar(){try{localStorage.setItem('tema',act()==='dark'?'light':'dark')}catch{}ap();}};ap();
+ matchMedia('(prefers-color-scheme: dark)').addEventListener('change',ap);
+ document.addEventListener('click',e=>{if(e.target.closest('[data-tema-btn]')){e.preventDefault();Tema.cambiar();}});})();
+
+/* menú */
+const menu=document.getElementById('menu');const cerrarMenu=()=>{menu.classList.remove('open');document.body.classList.remove('menu-open');};
+document.getElementById('menu-btn').onclick=()=>{menu.classList.add('open');document.body.classList.add('menu-open');};
+document.getElementById('menu-close').onclick=cerrarMenu;menu.querySelectorAll('a').forEach(a=>a.onclick=cerrarMenu);
+
+/* countdown */
+const cd={};['d','h','m','s'].forEach(k=>cd[k]=document.querySelector('[data-cd='+k+']'));const pad=n=>String(n).padStart(2,'0');
+(function tick(){let x=Math.max(0,EVENT_DATE-new Date());const d=Math.floor(x/864e5);x-=d*864e5;const h=Math.floor(x/36e5);x-=h*36e5;const m=Math.floor(x/6e4);x-=m*6e4;const s=Math.floor(x/1e3);cd.d.textContent=pad(d);cd.h.textContent=pad(h);cd.m.textContent=pad(m);cd.s.textContent=pad(s);document.getElementById('buybarDias').textContent=d;setTimeout(tick,1000);})();
+
+/* ticker + aliados */
+const tk=['14K · 4 corres 10 bailas','Dom 6 DIC','Capital Social Club','DJ en vivo','+1.500 regalos','Torneo de pádel','Negocios locales','Entrada $60.000'];
+document.getElementById('ticker').innerHTML=Array(3).fill(0).map(()=>tk.map(t=>`<span class="ticker__i">${t}</span>`).join('')).join('');
+const aliados=['Aliado 1','Aliado 2','Aliado 3','Aliado 4','Aliado 5','Aliado 6','Aliado 7','Aliado 8','Aliado 9','Aliado 10'];
+document.getElementById('marq').innerHTML=Array(2).fill(0).map(()=>aliados.map(a=>`<span class="marq__i">${a}</span>`).join('')).join('');
+
+/* reel sonido */
+const rvv=document.getElementById('reelV'),rm=document.getElementById('reelMute');
+rm.onclick=()=>{rvv.muted=!rvv.muted;rm.textContent=rvv.muted?'Sonido':'Silencio';if(!rvv.muted)rvv.play();};
+
+/* tabs */
+const tabs=document.getElementById('tabs');
+tabs.addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;const i=b.dataset.t;
+ tabs.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t===b));
+ document.querySelectorAll('.tabp').forEach(p=>p.classList.toggle('on',p.dataset.p===i));});
+
+/* FAQ */
+document.querySelectorAll('.faq-item').forEach(it=>{const q=it.querySelector('.faq-q'),a=it.querySelector('.faq-a');q.onclick=()=>{const op=it.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null;});if(!op){it.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}};});
+
+/* reveals + contador + barras + split */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;el.classList.add('in');
+  if(el.id==='splitBar'){el.querySelector('.split__run').style.flexGrow='4';el.querySelector('.split__dance').style.flexGrow='10';}
+  const big=el.querySelector('[data-count]');if(big&&!big.dataset.done){big.dataset.done=1;const end=+big.dataset.count,suf=big.dataset.suffix||'';let t0=null;(function an(ts){if(!t0)t0=ts;const p=Math.min(1,(ts-t0)/1400);big.textContent=Math.round(end*p).toLocaleString('es-CO')+(p===1?suf:'');if(p<1)requestAnimationFrame(an);})(0);const gb=document.getElementById('goalBar');if(gb)gb.style.width=META_PCT+'%';}
+  io.unobserve(el);}),{threshold:.2});
+document.querySelectorAll('.rv,.meta-box,#splitBar').forEach(el=>io.observe(el));
+
+/* buybar */
+const buybar=document.getElementById('buybar'),hero=document.getElementById('inicio'),entradas=document.getElementById('entradas');
+const ioBar=new IntersectionObserver(es=>es.forEach(e=>{if(e.target===hero)buybar.dataset.hero=e.isIntersecting?1:0;if(e.target===entradas)buybar.dataset.ent=e.isIntersecting?1:0;buybar.classList.toggle('show',buybar.dataset.hero==='0'&&buybar.dataset.ent!=='1');}),{threshold:.08});
+ioBar.observe(hero);ioBar.observe(entradas);
+
+/* onda neón */
+(function(){if(reduce)return;const c=document.getElementById('scope'),x=c.getContext('2d');let W,H,t=0;const size=()=>{W=c.width=c.offsetWidth*devicePixelRatio;H=c.height=c.offsetHeight*devicePixelRatio;};size();addEventListener('resize',size);
+ const col=()=>getComputedStyle(document.documentElement).getPropertyValue('--acento').trim()||'#39FF14';
+ (function loop(){x.clearRect(0,0,W,H);const cy=H*.62,k=col();for(let l=0;l<3;l++){x.beginPath();x.lineWidth=(l===0?2:1)*devicePixelRatio;x.strokeStyle=k;x.globalAlpha=l===0?.5:.16;for(let i=0;i<=W;i+=4*devicePixelRatio){const n=i/W;const y=cy+Math.sin(n*14+t*(1.2+l*.3))*H*.05*(1+l*.4)*Math.sin(n*3.1+t*.4)+Math.sin(n*41+t*2.3)*H*.012;if(i===0)x.moveTo(i,y);else x.lineTo(i,y);}x.stroke();}x.globalAlpha=1;t+=.016;requestAnimationFrame(loop);})();})();
+
+/* ============================================================
+   COMPRA (entrada única + Nequi)
+   ============================================================ */
+document.getElementById('nequiN').textContent=NEQUI;
+let qty=1,don=0;
+const donChk=document.getElementById('donChk'),donOps=document.getElementById('donOps');
+const qEl=document.getElementById('qty'),lineas=document.getElementById('lineas'),totalEl=document.getElementById('total'),pagoTotal=document.getElementById('pagoTotal');
+donChk.onchange=()=>{donOps.style.display=donChk.checked?'flex':'none';if(!donChk.checked){don=0;mark(null);}render();};
+donOps.querySelectorAll('button').forEach(b=>b.onclick=()=>{don=+b.dataset.don;mark(b);render();});
+function mark(x){donOps.querySelectorAll('button').forEach(y=>y.classList.toggle('on',y===x));}
+document.querySelectorAll('.step button').forEach(b=>b.onclick=()=>{qty=b.dataset.a==='inc'?Math.min(qty+1,20):Math.max(qty-1,1);render();});
+function total(){return qty*PRECIO+(donChk.checked?don:0);}
+function render(){
+  qEl.textContent=qty;
+  document.querySelector('[data-a=dec]').disabled=qty<=1;
+  let h=`<li><span>${qty} × Entrada general</span><span class="v">${fmt(qty*PRECIO)}</span></li>`;
+  if(donChk.checked&&don>0)h+=`<li><span>Aporte navideño 🎄</span><span class="v">${fmt(don)}</span></li>`;
+  lineas.innerHTML=h;const t=fmt(total());totalEl.textContent=t;pagoTotal.textContent=t;
+}
+render();
+
+const val=id=>document.getElementById(id).value.trim();
+function validar(){if(!val('fName'))return 'Escribe tu nombre.';if(val('fPhone').replace(/\D/g,'').length<7)return 'Escribe un WhatsApp válido.';return null;}
+function msg(t){document.getElementById('buyMsg').innerHTML=`<div class="aviso">${t}</div>`;}
+
+document.getElementById('btnWa').onclick=()=>{
+  const e=validar();if(e){msg(e);return;}
+  let m='¡Hola! Ya hice el pago de mi entrada para el *Coffee Party* 🎄\n\n';
+  m+=`• ${qty} × Entrada general — ${fmt(qty*PRECIO)}\n`;
+  if(donChk.checked&&don>0)m+=`• Aporte navideño — ${fmt(don)}\n`;
+  m+=`\n*TOTAL: ${fmt(total())}*\n\nNombre: ${val('fName')}\nWhatsApp: ${val('fPhone')}`;
+  const mail=val('fMail');if(mail)m+=`\nCorreo: ${mail}`;
+  m+='\n\nAdjunto el comprobante de Nequi. ¿Me confirman el cupo? ¡Gracias! 🙌';
+  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(m)}`,'_blank');
+};
+
+/* copiar número Nequi */
+document.getElementById('copyN').onclick=async()=>{try{await navigator.clipboard.writeText(NEQUI.replace(/\s/g,''));document.getElementById('copyN').textContent='¡Copiado!';setTimeout(()=>document.getElementById('copyN').textContent='Copiar',1500);}catch(e){}};
+
+/* enlaces WhatsApp */
+const waAsk=`https://wa.me/${WHATSAPP}?text=`+encodeURIComponent('¡Hola! Quiero info del Coffee Party del 6 de diciembre 🎄');
+document.getElementById('btnAsk').href=waAsk;
+document.getElementById('footWa').href=waAsk;
+document.getElementById('btnShare').href='https://wa.me/?text='+encodeURIComponent('¡Pilas! Coffee Party el domingo 6 de diciembre en Capital Social Club, Fusa 🎄 14K (4 corres, 10 bailas), DJ en vivo y regalos para +1.500 niños. Cupos limitados: '+location.origin);
+
+/* galería automática: carga /img/galeria-1.jpg, -2.jpg ... hasta que falte una */
+(function(){const gal=document.getElementById('galeria'),sec=document.getElementById('galeriaSec');let n=1;const max=30;
+ function load(){const im=new Image();im.onload=()=>{if(sec.style.display==='none'){sec.style.display='';sec.querySelectorAll('.rv').forEach(e=>e.classList.add('in'));}const d=document.createElement('div');d.className='ph on';const i=document.createElement('img');i.src='/img/galeria-'+n+'.jpg';i.alt='Coffee Party';i.loading='lazy';d.appendChild(i);gal.appendChild(d);n++;if(n<=max)load();};im.onerror=()=>{};im.src='/img/galeria-'+n+'.jpg';}
+ load();})();
+</script>
+</body>
+</html>

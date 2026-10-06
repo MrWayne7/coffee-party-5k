@@ -1,0 +1,10 @@
+name = "coffee-party-5k"
+compatibility_date = "2024-11-06"
+pages_build_output_dir = "."
+
+# Base de datos opcional (para llevar registro de pedidos/pagos).
+# Descomenta estas 3 líneas y pon tu database_id si decides usar D1.
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "coffee-party-5k"
+# database_id = "PON_AQUI_TU_DATABASE_ID"

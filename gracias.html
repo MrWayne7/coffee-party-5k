@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Confirmación — Coffee Party 5K</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--verde:#39FF14;--rec:#FF3B30}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000;color:#EDF3E8;font-family:'Space Grotesk',system-ui,sans-serif;min-height:100svh;display:grid;place-items:center;padding:1.5rem;line-height:1.5}
+.card{border:2px solid var(--verde);padding:2.5rem;max-width:34rem;width:100%;text-align:center}
+.estado{font-family:'Anton',sans-serif;font-size:clamp(2.6rem,9vw,4.5rem);line-height:.9;text-transform:uppercase;margin:.3rem 0}
+.ok{color:var(--verde)} .no{color:var(--rec)} .wait{color:#8C9C88}
+.ic{font-family:'Anton',sans-serif;font-size:3.5rem;line-height:1}
+p{color:#8C9C88;margin:.8rem auto 0;max-width:34ch}
+.ref{display:inline-block;margin-top:1rem;border:2px solid #1C2A1E;padding:.5rem .9rem;font-size:.85rem;color:#8C9C88}
+.btn{display:inline-block;margin-top:1.8rem;text-decoration:none;border:2px solid var(--verde);background:var(--verde);color:#000;padding:.8rem 1.4rem;font-weight:700;text-transform:uppercase}
+.btn:hover{background:#000;color:var(--verde)}
+.spin{display:inline-block;width:2.5rem;height:2.5rem;border:3px solid #1C2A1E;border-top-color:var(--verde);border-radius:50%;animation:s .8s linear infinite}
+@keyframes s{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="card" id="card">
+  <div class="spin"></div>
+  <div class="estado wait" style="margin-top:1rem">Verificando…</div>
+  <p>Estamos confirmando tu pago con la pasarela.</p>
+</div>
+<script>
+const card=document.getElementById('card');
+const id=new URLSearchParams(location.search).get('id');
+function render(ic,cls,titulo,texto,ref){
+  card.innerHTML=`<div class="ic ${cls}">${ic}</div><div class="estado ${cls}">${titulo}</div><p>${texto}</p>`+
+    (ref?`<div class="ref">Ref: ${ref}</div>`:'')+`<div><a class="btn" href="/">Volver al inicio</a></div>`;
+}
+async function check(){
+  if(!id){render('?','no','Sin datos','No encontramos la transacción. Si ya pagaste, revisa tu correo.');return;}
+  // Wompi: GET público de la transacción (prueba producción y luego sandbox)
+  for(const base of ['https://production.wompi.co/v1','https://sandbox.wompi.co/v1']){
+    try{
+      const r=await fetch(base+'/transactions/'+id);
+      if(!r.ok)continue;
+      const {data}=await r.json();
+      const st=data.status, ref=data.reference;
+      if(st==='APPROVED')return render('✓','ok','¡Pago aprobado!','Tu cupo quedó confirmado. Te enviamos el detalle a tu correo. ¡Nos vemos el 14 de diciembre! 🎄',ref);
+      if(st==='DECLINED'||st==='ERROR')return render('✕','no','Pago rechazado','No se pudo procesar el pago. Puedes intentarlo de nuevo desde el inicio.',ref);
+      return render('…','wait','Pago en proceso','Tu pago está siendo procesado. Te confirmamos por correo apenas se apruebe.',ref);
+    }catch(e){}
+  }
+  render('?','no','No verificado','No pudimos verificar el estado ahora. Si ya pagaste, revisa tu correo de confirmación.');
+}
+check();
+</script>
+</body>
+</html>
