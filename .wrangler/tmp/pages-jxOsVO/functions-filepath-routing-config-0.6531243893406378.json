@@ -1,0 +1,21 @@
+{
+  "routes": [
+    {
+      "routePath": "/api/firma",
+      "mountPath": "/api",
+      "method": "POST",
+      "module": [
+        "api/firma.js:onRequestPost"
+      ]
+    },
+    {
+      "routePath": "/api/wompi-webhook",
+      "mountPath": "/api",
+      "method": "POST",
+      "module": [
+        "api/wompi-webhook.js:onRequestPost"
+      ]
+    }
+  ],
+  "baseURL": "/"
+}
